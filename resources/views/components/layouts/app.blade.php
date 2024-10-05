@@ -24,13 +24,18 @@
                     <ul class="navbar-nav">
                         <!-- Check if the current request matches the route and add 'active' class -->
                         <li class="nav-item">
-                            <a class="nav-link {{ request()->is('todo') ? 'active' : '' }}" href="todo">Todos</a>
+                            <a wire:navigate class="nav-link {{ request()->is('todo') ? 'active' : '' }}" href="todo">Todos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {{ request()->is('counter') ? 'active' : '' }}" href="counter">Counter</a>
+                            <a wire:navigate class="nav-link {{ request()->is('counter') ? 'active' : '' }}" href="counter">Counter</a>
                         </li>
+
                         <li class="nav-item">
-                            <a class="nav-link {{ request()->is('post') ? 'active' : '' }}" href="post">Posts</a>
+                            <a wire:navigate class="nav-link {{ request()->is('create_post') ? 'active' : '' }}" href="create_post">Create Post</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a wire:navigate class="nav-link {{ request()->is('post') ? 'active' : '' }}" href="post">Posts</a>
                         </li>
                         <!-- Add more nav links as needed -->
                     </ul>

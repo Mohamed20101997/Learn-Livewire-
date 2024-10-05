@@ -1,7 +1,7 @@
 <?php
 
 use App\Livewire\Counter;
-use App\Livewire\Posts\CreatePost;
+use App\Livewire\CreatePost;
 use App\Livewire\ShowPosts;
 use App\Livewire\Todos;
 use Illuminate\Support\Facades\Route;
@@ -25,4 +25,6 @@ Route::get('/', function () {
 Route::get('/counter', Counter::class);
 Route::get('/todo', Todos::class);
 Route::get('/post', ShowPosts::class);
+
+Route::get('/create_post', CreatePost::class);
 
